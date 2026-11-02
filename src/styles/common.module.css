@@ -1,0 +1,15 @@
+/* Спільні стилі: імпортуються як `common` у компонентах */
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.glass{background:var(--s);border:1px solid var(--l);border-radius:22px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.btn{display:inline-flex;align-items:center;padding:14px 28px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid var(--l);background:var(--s);transition:border-color .3s,box-shadow .3s}
+.btn:hover{border-color:var(--g)}
+.pri{background:var(--a);border-color:var(--a);box-shadow:0 0 32px rgba(47,123,255,.45)}
+.pri:hover{border-color:var(--a);box-shadow:0 0 52px rgba(88,166,255,.75)}
+.spot{position:relative}
+.spot::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(320px circle at var(--cx,50%) var(--cy,0),rgba(88,166,255,.17),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.spot:hover::before{opacity:1}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{padding:8px 16px;border-radius:999px;border:1px solid rgba(88,166,255,.45);font-size:14px;color:#cfe3ff;transition:background .3s,box-shadow .3s}
+.pill:hover{background:rgba(47,123,255,.22);box-shadow:0 0 20px rgba(47,123,255,.45)}
+.ln{border-style:dashed;color:var(--m);animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{50%{border-color:var(--g);color:var(--t)}}

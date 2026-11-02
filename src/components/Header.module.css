@@ -1,0 +1,22 @@
+.header{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(env(safe-area-inset-top,0px) + 12px) 20px 12px;display:flex;justify-content:center}
+.inner{position:relative;width:100%;max-width:1120px;display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 24px;border-radius:999px}
+.logo{font:700 15px var(--display)}
+.logo b{color:var(--g)}
+/* На десктопі обгортка «розчиняється»: nav і кнопка стають прямими flex-дітьми .inner */
+.menu{display:contents}
+.nav{display:flex;gap:30px;color:var(--m);font-size:15px}
+.nav a{transition:color .25s}
+.nav a:hover{color:var(--t)}
+.inner .cta{padding:10px 22px}
+.burger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:44px;height:44px;padding:0;border-radius:50%;border:1px solid var(--l);background:var(--s);color:var(--t);cursor:pointer}
+.burger span{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;transition:transform .3s}
+.burger[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+.burger[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+@media(max-width:860px){
+  .burger{display:flex}
+  .menu{display:flex;flex-direction:column;gap:18px;position:absolute;top:calc(100% + 10px);left:0;right:0;padding:22px;border-radius:22px;border:1px solid var(--l);background:rgba(8,12,22,.96);box-shadow:0 24px 60px rgba(0,0,0,.5);opacity:0;visibility:hidden;translate:0 -10px;transition:opacity .3s,translate .3s,visibility .3s}
+  .open{opacity:1;visibility:visible;translate:0 0}
+  .nav{flex-direction:column;gap:4px;font-size:18px}
+  .nav a{padding:12px 4px;border-bottom:1px solid var(--l)}
+  .inner .cta{justify-content:center;padding:14px 22px}
+}

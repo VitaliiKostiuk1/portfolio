@@ -1,0 +1,4 @@
+.root{text-align:center}
+.root h2{font-size:clamp(32px,6vw,72px);max-width:900px;margin:0 auto 30px}
+.mail{display:inline-block;font:700 clamp(18px,3vw,32px) var(--display);border-bottom:2px solid var(--a);padding-bottom:6px;margin:10px 0 44px;word-break:break-all}
+.soc{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}

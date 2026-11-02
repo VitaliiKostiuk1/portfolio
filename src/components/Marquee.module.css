@@ -1,0 +1,5 @@
+.root{overflow:hidden;border-block:1px solid var(--l);padding:22px 0;background:rgba(255,255,255,.02)}
+.track{display:flex;width:max-content;animation:run 30s linear infinite}
+.track span{font:700 clamp(24px,4vw,44px) var(--display);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.3);padding:0 30px;white-space:nowrap}
+.track span::after{content:"✦";color:var(--g);-webkit-text-stroke:0;margin-left:60px;font-size:.5em;vertical-align:middle}
+@keyframes run{to{transform:translateX(-50%)}}

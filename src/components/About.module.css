@@ -1,0 +1,2 @@
+.text{font:700 clamp(24px,3.6vw,46px)/1.28 var(--display);letter-spacing:-.02em;max-width:980px}
+.lead{color:var(--m);max-width:640px;margin-top:40px}
